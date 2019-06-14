@@ -63,11 +63,13 @@ class AddContact extends Component {
           const { dispatch } = value;
           return (
             <div className="card mb-3">
-              <div className="card-header">Add contact</div>
+              <div className="card-header text-center">
+                <strong>Add contact</strong>
+              </div>
               <div className="card-body" />
               <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                 <TextInputGroup
-                  label="Name"
+                  label=" Name"
                   name="name"
                   placeholder="Enter name..."
                   value={name}
@@ -75,7 +77,7 @@ class AddContact extends Component {
                   error={errors.name}
                 />
                 <TextInputGroup
-                  label="Email"
+                  label=" Email"
                   name="email"
                   type="email"
                   placeholder="Enter email..."
@@ -84,7 +86,7 @@ class AddContact extends Component {
                   error={errors.email}
                 />
                 <TextInputGroup
-                  label="Phone"
+                  label=" Phone"
                   name="phone"
                   placeholder="Enter phone..."
                   value={phone}

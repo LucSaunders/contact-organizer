@@ -28,15 +28,33 @@ export class Provider extends Component {
     contacts: [
       {
         id: 1,
-        name: 'John Doe',
-        email: 'jdoe@email.com',
-        phone: '879-567-5443'
-      },
-      {
-        id: 2,
         name: 'Karen Hurst',
         email: 'khurst@email.com',
         phone: '202-9827-8395'
+      },
+      {
+        id: 2,
+        name: 'Charles Mingus',
+        email: 'mingus@gmail.com',
+        phone: '1-800-fat-bass'
+      },
+      {
+        id: 3,
+        name: 'Patty Smith',
+        email: 'PattySmith@gmail.com',
+        phone: '1-800-hip-poet'
+      },
+      {
+        id: 4,
+        name: 'Mike Trout',
+        email: 'trout@gmail.com',
+        phone: '1-800-homerun'
+      },
+      {
+        id: 5,
+        name: 'Chris Rock',
+        email: 'crock@gmail.com',
+        phone: '1-800-fun-naay'
       }
     ],
     dispatch: action => {

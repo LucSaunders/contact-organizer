@@ -37,7 +37,7 @@ const Header = props => {
 };
 
 Header.defaultProps = {
-  branding: 'My App'
+  branding: 'Contact Organizer App'
 };
 
 Header.propTypes = {
