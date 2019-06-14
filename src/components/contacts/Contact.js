@@ -31,11 +31,15 @@ class Contact extends Component {
                     })
                   }
                   className="fas fa-sort-down"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: 'pointer', color: '#17a2b8' }}
                 />
                 <i
                   className="fas fa-times"
-                  style={{ cursor: 'pointer', float: 'right', color: 'red' }}
+                  style={{
+                    cursor: 'pointer',
+                    float: 'right',
+                    color: '#17a2b8'
+                  }}
                   onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 />
               </h4>
