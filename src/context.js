@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
 const Context = React.createContext();
 
 const reducer = (state, action) => {
@@ -25,42 +25,17 @@ const reducer = (state, action) => {
 // Create "store" for app-level state via Context
 export class Provider extends Component {
   state = {
-    contacts: [
-      {
-        id: 1,
-        name: 'Karen Hurst',
-        email: 'khurst@email.com',
-        phone: '202-9827-8395'
-      },
-      {
-        id: 2,
-        name: 'Charles Mingus',
-        email: 'mingus@gmail.com',
-        phone: '1-800-fat-bass'
-      },
-      {
-        id: 3,
-        name: 'Patty Smith',
-        email: 'PattySmith@gmail.com',
-        phone: '1-800-hip-poet'
-      },
-      {
-        id: 4,
-        name: 'Mike Trout',
-        email: 'trout@gmail.com',
-        phone: '1-800-homerun'
-      },
-      {
-        id: 5,
-        name: 'Chris Rock',
-        email: 'crock@gmail.com',
-        phone: '1-800-fun-naay'
-      }
-    ],
+    contacts: [],
     dispatch: action => {
       this.setState(state => reducer(state, action));
     }
   };
+
+  componentDidMount() {
+    axios
+      .get('https://jsonplaceholder.typicode.com/users')
+      .then(response => this.setState({ contacts: response.data }));
+  }
 
   render() {
     // Include entire state so it will be accessible through the app
