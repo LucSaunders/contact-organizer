@@ -84,7 +84,9 @@ class EditContact extends Component {
           const { dispatch } = value;
           return (
             <div className="card mb-3">
-              <div className="card-header">Edit contact</div>
+              <div className="card-header text-center">
+                <strong>Edit contact</strong>
+              </div>
               <div className="card-body">
                 <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                   <TextInputGroup
