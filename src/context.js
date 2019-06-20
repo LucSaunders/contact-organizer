@@ -31,10 +31,13 @@ export class Provider extends Component {
     }
   };
 
-  componentDidMount() {
-    axios
-      .get('https://jsonplaceholder.typicode.com/users')
-      .then(response => this.setState({ contacts: response.data }));
+  async componentDidMount() {
+    const response = await axios.get(
+      'https://jsonplaceholder.typicode.com/users'
+    );
+    // .then(response => this.setState({ contacts: response.data }));
+
+    this.setState({ contacts: response.data });
   }
 
   render() {
