@@ -40,14 +40,14 @@ class Contact extends Component {
                     })
                   }
                   className="fas fa-sort-down"
-                  style={{ cursor: 'pointer', color: '#17a2b8' }}
+                  style={{ cursor: 'pointer', color: '#5bc0de' }}
                 />
                 <i
                   className="fas fa-times"
                   style={{
                     cursor: 'pointer',
                     float: 'right',
-                    color: '#17a2b8'
+                    color: '#000000'
                   }}
                   onClick={this.onDeleteClick.bind(this, id, dispatch)}
                 />
@@ -57,7 +57,7 @@ class Contact extends Component {
                     style={{
                       cursor: 'pointer',
                       float: 'right',
-                      color: 'black',
+                      color: '#5bc0de',
                       marginRight: '1rem'
                     }}
                   />
