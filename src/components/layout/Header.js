@@ -7,10 +7,10 @@ const Header = props => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-info mb-3 py-0">
       <div className="container">
-        <a href="/" className="navbar-brand">
+        <Link to="/#" className="navbar-brand">
+          {' '}
           {branding}
-        </a>
-        {/* <p className="navbar-brand text-light">{branding}</p> */}
+        </Link>
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
