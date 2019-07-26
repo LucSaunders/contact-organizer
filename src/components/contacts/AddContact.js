@@ -29,6 +29,8 @@ class AddContact extends Component {
       return;
     }
 
+    // Error handling imperfect: jsonplaceholder.typicode.com populates with erratically formatted phone numbers; error-handling has been included in AddContact but removed from EditContact to not conflict with phone-number formatted established by jsonplaceholder.typicode.com. This version allows only ten-digit numbers (without country code) to be added.
+    
     if (phone.length !== 10) {
       this.setState({
         errors: {

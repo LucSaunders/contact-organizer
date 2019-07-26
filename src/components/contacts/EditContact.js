@@ -42,11 +42,12 @@ class EditContact extends Component {
       return;
     }
 
-    if (phone.length !== 10) {
+    // Error handling imperfect: jsonplaceholder.typicode.com populates with erratically formatted phone numbers; error-handling has been included in AddContact but removed from EditContact to not conflict with phone-number formatted established by jsonplaceholder.typicode.com
+
+    if (phone === '') {
       this.setState({
         errors: {
-          phone:
-            'Phone is required. Please enter a ten-digit phone number with no parentheses, hyphens, or other extra characters.'
+          phone: 'Phone is required.'
         }
       });
       return;
