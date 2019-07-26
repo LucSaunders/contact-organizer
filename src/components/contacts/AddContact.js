@@ -29,8 +29,13 @@ class AddContact extends Component {
       return;
     }
 
-    if (phone === '') {
-      this.setState({ errors: { phone: 'Phone is required' } });
+    if (phone.length !== 10) {
+      this.setState({
+        errors: {
+          phone:
+            'Phone is required. Please enter a ten-digit phone number with no parentheses, hyphens, or other extra characters.'
+        }
+      });
       return;
     }
 
